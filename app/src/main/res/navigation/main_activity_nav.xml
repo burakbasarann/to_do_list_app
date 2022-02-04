@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anaSayfaFragment">
+
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.basaran.odev7.fragment.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa">
+        <action
+            android:id="@+id/isGuncelleGecis"
+            app:destination="@id/isGuncelleFragment" />
+        <action
+            android:id="@+id/isKayitGecis"
+            app:destination="@id/isKayitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/isGuncelleFragment"
+        android:name="com.basaran.odev7.fragment.IsGuncelleFragment"
+        android:label="fragment_is_guncelle"
+        tools:layout="@layout/fragment_is_guncelle">
+        <argument
+            android:name="yapilacaklar"
+            app:argType="com.basaran.odev7.entity.Yapilacaklar" />
+    </fragment>
+    <fragment
+        android:id="@+id/isKayitFragment"
+        android:name="com.basaran.odev7.fragment.IsKayitFragment"
+        android:label="fragment_is_kayit"
+        tools:layout="@layout/fragment_is_kayit" />
+</navigation>
